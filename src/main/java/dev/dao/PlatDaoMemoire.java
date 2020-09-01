@@ -5,6 +5,8 @@ import dev.entite.Plat;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 public class PlatDaoMemoire implements IPlatDao {
 
     private List<Plat> listePlats = new ArrayList<>();

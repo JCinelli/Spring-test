@@ -7,10 +7,16 @@ import dev.ihm.options.OptionListerPlats;
 import dev.ihm.options.OptionTerminer;
 import dev.service.IPlatService;
 
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class Menu {
 
     private Map<Integer, IOptionMenu> actions = new HashMap<>();
@@ -23,6 +29,22 @@ public class Menu {
         actions.put(2, new OptionAjouterPlat(scanner, service));
         actions.put(99, new OptionTerminer());
         this.scanner = scanner;
+    }
+    
+    @Autowired
+    public Menu(Scanner scanner, List<IOptionMenu> optionsMenu) {
+    	
+    	int index = 1;
+    	
+    	for (IOptionMenu iOptionMenu : optionsMenu) {
+			
+    		actions.put(index, iOptionMenu);
+    		
+    		index++;
+    		
+		}
+    	
+    	this.scanner = scanner;
     }
 
     public void afficher() {

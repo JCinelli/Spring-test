@@ -6,6 +6,9 @@ import dev.exception.PlatException;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class PlatServiceVersion1 implements IPlatService {
 
     private IPlatDao dao;
