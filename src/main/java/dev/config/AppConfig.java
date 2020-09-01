@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @ComponentScan("dev")
 @PropertySource("app.properties")
-public class Appconfig {
+public class AppConfig {
 	
 	@Bean
 	public Scanner scanner() {

@@ -27,21 +27,13 @@ class PlatServiceVersion1Test {
 	@Test
 	void ajouterPlatNomInvalid() {
 
-		assertThrows(PlatException.class, () -> {
-
-			pSerV1.ajouterPlat("le", 32000);
-
-		});
+		assertThrows(PlatException.class, () -> pSerV1.ajouterPlat("le", 32000));
 	}
 
 	@Test
 	void ajouterPlatPrixInvalid() {
 
-		assertThrows(PlatException.class, () -> {
-
-			pSerV1.ajouterPlat("blabla", 32);
-
-		});
+		assertThrows(PlatException.class, () -> pSerV1.ajouterPlat("blabla", 32));
 	}
 
 	@Test
