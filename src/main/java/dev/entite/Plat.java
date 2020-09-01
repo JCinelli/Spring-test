@@ -32,6 +32,11 @@ public class Plat {
     }
 
     @Override
+	public String toString() {
+		return "Plat [nom=" + nom + ", prixEnCentimesEuros=" + prixEnCentimesEuros + "]";
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
