@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Plat {
 
+	private int id;
     private String nom;
     private Integer prixEnCentimesEuros;
 
@@ -15,7 +16,21 @@ public class Plat {
         this.prixEnCentimesEuros = prixEnCentimesEuros;
     }
 
-    public String getNom() {
+    /**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNom() {
         return nom;
     }
 

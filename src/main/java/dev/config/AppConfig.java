@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 //Le stéréotype @Configuration précise que cette classe servira de configuration.
 @Configuration
 @ComponentScan("dev")
-@PropertySource("test.properties")
+@PropertySource("app.properties")
 public class AppConfig {
 	
 	@Bean
